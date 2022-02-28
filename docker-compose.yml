@@ -1,0 +1,18 @@
+web:
+  image: 'gitlab/gitlab-ee:latest'
+  restart: always
+  hostname: "${HOST:-127.0.0.1}"
+  environment:
+    GITLAB_OMNIBUS_CONFIG: |
+      external_url "https://${HOST:-127.0.0.1}" 
+      gitlab_rails['gitlab_shell_ssh_port'] = 2224
+  ports:
+    - '80:80'
+    - '443:443'
+    - '2224:22'
+    - '5050:5050'
+    - '8093:8093'
+  volumes:
+    - '/srv/gitlab/config:/etc/gitlab'
+    - '/srv/gitlab/logs:/var/log/gitlab'
+    - '/srv/gitlab/data:/var/opt/gitlab'
