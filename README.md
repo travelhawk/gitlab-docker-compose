@@ -11,3 +11,5 @@ Update script to check for a new GitLab version. Installs minor version updates 
 
 ## Update GitLab
 Run `check_gitlab_update.sh`.
+
+## Disclaimer
