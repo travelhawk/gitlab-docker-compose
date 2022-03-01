@@ -7,9 +7,5 @@ If you want to run `check_gitlab_update.sh` regulary, you can use a crontab task
 - docker
 - docker-compose
 
-## Configuration
-
-## Scripts
-
 ## Update GitLab
 Run `check_gitlab_update.sh`.
