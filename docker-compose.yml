@@ -2,7 +2,7 @@ version: "3"
 
 services:
   web:
-    image: 'gitlab/gitlab-ee:14.4.4-ee.0'
+    image: 'gitlab/gitlab-ee:latest'
     restart: always
     hostname: "${HOST:-127.0.0.1}"
     environment:
